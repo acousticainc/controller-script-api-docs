@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmixcraft_10_api_docs=self.webpackChunkmixcraft_10_api_docs||[]).push([[2733],{8537:a=>{a.exports=JSON.parse('{"label":"facebook","permalink":"/Mixcraft-10-API-docs/blog/tags/facebook","allTagsPath":"/Mixcraft-10-API-docs/blog/tags","count":1}')}}]);
