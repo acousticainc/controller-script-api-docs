@@ -11,15 +11,15 @@ const config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://dannylutz.github.io',
+  url: 'https://acousticainc.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/Mixcraft-10-API-docs/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'dannylutz', // Usually your GitHub org/user name.
-  projectName: 'dannylutz.github.io', // Usually your repo name.
+  organizationName: 'acousticainc', // Usually your GitHub org/user name.
+  projectName: 'acousticainc.github.io', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
