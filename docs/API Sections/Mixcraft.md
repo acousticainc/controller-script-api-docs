@@ -31,6 +31,11 @@ The ```Mixcraft``` section covers functions and constants that allow access to t
 
 ## Functions  
 
+### AddMarker(Time)    
+This function adds a marker to the project at the specified time.
+
+- **Time** (float): _the time (in milliseconds) to set the marker on the timeline_
+
 ### FastForward(SeekAmount)    
 This function forwards the playhead by the specified SeekAmount (see seek constants above).
 
@@ -57,16 +62,16 @@ This function returns an integer value between 1 and 100, representing the perce
 This function returns the total length of the project in beats or time.
 
 ### GetTempo()
-This function gets the project's tempo.
+This function returns a float value of the project's tempo in beats per minute.
 
 ### GetTime()  
 This function returns the current playhead time in the project.
 
 ### GetTimeSignatureDenominator()  
-This function returns the denominator of the project's time signature.
+This function returns an int value of the project's time signature denominator.
 
 ### GetTimeSignatureNumerator()  
-This function returns the numerator of the project's time signature.
+This function returns an int value of the project's time signature numerator.
 
 ### IsLoopOn()  
 This function returns a boolean value indicating whether the loop is enabled.
@@ -109,25 +114,47 @@ This function sets the project's key to the specified value, represented by an i
 
 - **key** (int): _an integer representing the key (0-7) to set for the project_
 
-### SetLoopStart(startTime)  
+### SetLoopStart(start)  
 This function sets the loop start time.
 
-- **startTime** (float): _a number representing the time (in seconds)_
+- **start** (float): _a number representing the bar the loop starts on_
 
 ### SetLoopLength(length)
 This function sets the length of the loop.
 
-- **length** (float): _a number representing the time (in seconds)_
+- **length** (float): _a number representing the number of bars the loop is set to_
+
 
 ### SetMetronome(metroType, state)
-A function that sets the metronome type and toggles the on/off state.
+This function that sets the metronome type and toggles the on/off state.
 
 - **metroType** (CONST): one of the available metronome types as listed above in Metronome Constants.
 
 - **state** (bool): the on or off state for the metronome.
 
+### SetTempo(tempo)
+This function sets the tempo.
+
+- **tempo** (float): _a number representing the tempo in beats per minute_
+
+### SetTime(time)
+This function sets the location of the playhead on the timeline.
+
+- **time** (float): _the location in milliseconds to set the time of the playhead_
+
+### SetTimeSignature(numerator, denominator)
+This function sets the location of the playhead on the timeline.
+
+- **numerator** (int): _the numerator value of teh time signature_
+- **denominator** (int): _the denominator value of teh time signature_
 
 ### ShowLoop(bool)
 This function toggles the loop GUI indicators.
 
-- **bool** (bool): _a true or false value that sets the state for the loop region indicator in eth GUI_
+- **bool** (bool): _a true or false value that sets the state for the loop region indicator in the GUI_
+
+### TogglePlay()
+This function toggles the play state between playing and stopped.
+
+### Undo()
+This function reverts to the last undo state in memory.
