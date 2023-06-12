@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmixcraft_10_api_docs=self.webpackChunkmixcraft_10_api_docs||[]).push([[3874],{2435:s=>{s.exports=JSON.parse('{"label":"docusaurus","permalink":"/controller-script-api-docs/blog/tags/docusaurus","allTagsPath":"/controller-script-api-docs/blog/tags","count":4}')}}]);
