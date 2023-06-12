@@ -14,7 +14,7 @@ const config = {
   url: 'https://acousticainc.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/Mixcraft-10-API-docs/',
+  baseUrl: '/controller-script-api-docs/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
