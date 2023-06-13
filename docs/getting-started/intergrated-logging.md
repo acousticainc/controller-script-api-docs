@@ -17,11 +17,8 @@ The MIDI data in this log column is presented in the following format:
 
 Line | Message Type | MIDI Channel | Data 1 | Data 2
 ---  | ---          | ---          | ---    | ---        
-1	 | 80 (cc)      | CH:16		   | 0x3D 	| 0x3C  
+1	 | B0 (CC)      | CH:00 (1)		   | 0x04 (4) 	| 0x2A (42)  
   
+The values are displayed in their hex and decimal values. In the case of the MEssage Type, it will display the hex and common name (e.g., CC, Note, etc.)
 
-:::tip Note: 
-
-MIDI Channel is being converted from hexidecimal
-
-:::
+![](/img/MIDImonitor.png)
