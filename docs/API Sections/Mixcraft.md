@@ -31,15 +31,15 @@ The ```Mixcraft``` section covers functions and constants that allow access to t
 
 ## Functions  
 
-### AddMarker(Time)    
+### AddMarker(time)    
 This function adds a marker to the project at the specified time.
 
-- **Time** (float): _the time (in milliseconds) to set the marker on the timeline_
+- **time** (float): _the time (in milliseconds) to set the marker on the timeline_
 
-### FastForward(SeekAmount)    
+### FastForward(seekAmount)    
 This function forwards the playhead by the specified SeekAmount (see seek constants above).
 
-- **SeekAmount** (float): _the amount of time (in seconds) to forward the playhead_
+- **seekAmount** (float): _the amount of time (in seconds) to forward the playhead_
 
 ### GetKey()
 This function returns the current key of the project, represented by an integer between 0 and 7.
@@ -96,10 +96,10 @@ This function starts the recording process in Mixcraft.
 ### Redo()
 This function redoes the last action performed in Mixcraft.
 
-### Rewind(SeekAmount)    
+### Rewind(seekAmount)    
 This function rewinds the playhead by the specified SeekAmount (see seek constants above).
 
-- **SeekAmount** (float): _the amount of time (in seconds) to rewind the playhead_
+- **seekAmount** (float): _the amount of time (in seconds) to rewind the playhead_
 
 ### Save()
 This function saves the current state of the project.

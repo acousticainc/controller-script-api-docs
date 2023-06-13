@@ -4,13 +4,40 @@ sidebar_position: 3
 
 The ```Track``` section covers functions and constants that allow access to the track controls in Mixcraft.
 
-## Constants
+## Track Constants
 
 - MASTER_TRACK (-1)
 - PREVIEW_TRACK (-2)
+
+## Track EQ Constants
+
 - EQ_LOW
 - EQ_MID
 - EQ_HIGH
+
+## Quantize Constants
+
+- QUANTIZE_OFF
+- QUANTIZE_4
+- QUANTIZE_8
+- QUANTIZE_16
+- QUANTIZE_32
+- QUANTIZE_4_TRIP
+- QUANTIZE_8_TRIP
+- QUANTIZE_16_TRIP
+
+## Track Type Constants
+
+- TT_Audio
+- TT_MIDI
+- TT_SubMix
+- TT_Master
+- TT_Send
+- TT_Output
+- TT_Video
+- TT_InstrumentOutput
+- TT_Rewire
+- TT_Text
 
 ## Functions
 
@@ -18,6 +45,7 @@ The ```Track``` section covers functions and constants that allow access to the 
 This function arms or disarms the track at the specified index for recording based on the provided boolean value.
 
 - **trackIndex** (int): _The index of the track_
+- **bool** )bool): _The arm state of the track_
 
 ### GetBankOffset()
 This function returns the current bank offset.
@@ -28,83 +56,80 @@ This function returns the current size of the bank for the control surface.
 ### GetColor(trackIndex)
 This function returns a string version of the color for the specified track index, in the format AARRGGBB.
 
-- **trackIndex** (int): _The index of the track_
+- **trackIndex** (int): _The index of the track to get the color of_
 
 ### GetCompressor(trackIndex)
 This function returns the compressor value for the track at the specified index.
 
-- **trackIndex** (int): _The index of the track_
+- **trackIndex** (int): _The index of the track to get the compressor value of_
 
 ### GetDrive(trackIndex)
 This function returns the drive value for the track at the specified index.
 
-- **trackIndex** (int): _The index of the track_
+- **trackIndex** (int): _The index of the track to get the drive value of_
 
 ### GetEQ(trackIndex, eqtype)
 This function returns the current EQ value for the specified track index and EQ type.
 
 - **trackIndex** (int): _The index of the track_
-- **eqType** (type): _The EQ type to get the value from (see constants at top of page) _
+- **eqType** (type): _The EQ type to get the value from (see EQ constants at top of page) _
 
 ### GetGain(trackIndex)
 This function returns the gain value for the track at the specified index.
 
-- **trackIndex** (int): _The index of the track_
+- **trackIndex** (int): _The index of the track to get the gain value of_
 
 ### GetID(trackIndex)
 This function returns the ID of the track at the specified track index.
 
-- **trackIndex** (int): _The index of the track_
+- **trackIndex** (int): _The index of the track to get the ID of_
 
 ### GetName(trackIndex)
 This function returns the name of the track at the specified index.
 
-- **trackIndex** (int): _The index of the track_
+- **trackIndex** (int): _The index of the track to get the name of_
 
 ### GetNumPluginParams(track, index)
 This function returns the number of parameters for the plugin at the specified index on the given track.
 
-- **track** (int): The index of the track
-- **index** (int): The index of the plugin
+- **track** (int): _The index of the track where the plugin is instantiated_
+- **index** (int): _The index of the plugin inserted on the defined track_
 
 ### GetPan(trackIndex)
 This function returns the pan value for the track at the specified index.
 
-- **trackIndex** (int): _The index of the track_
+- **trackIndex** (int): _The index of the track to get the pan value of_
 
 ### GetPluginName(track, index)
-This function returns the name of the plugin at the specified index for the given track.
+This function returns the name of the plugin, as a string value, at the specified index for the given track.
 
-- **track** (int): The index of the track
-- **index** (int): The index of the plugin
+- **track** (int): _The index of the track where the plugin is instantiated_
+- **index** (int): _The index of the plugin inserted on the defined track_
 
 ### GetPluginParamName(track, index, paramIndex)
-This function returns the name of the parameter at the specified paramIndex for the plugin at the specified index on the given track.
+This function returns the name of the parameter, as a string value, at the specified paramIndex for the plugin at the specified index on the given track.
 
-- **track** (int): _The index of the track_
-- **index** (int): _The index of the plugin_
-- **paramindex** (int): _The index of the parameter_
+- **track** (int): _The index of the track where the plugin is instantiated_
+- **index** (int): _The index of the plugin inserted on the defined track_
+- **paramindex** (int): _The index of the plugin parameter_
 
 ### GetPluginParamValue(track, index, paramIndex)
-This function returns the value of the parameter at the specified paramIndex for the plugin at the specified index on the given track. The value is between 0 and 1.0.
+This function returns the value of the parameter, as a double value, at the specified paramIndex for the plugin at the specified index on the given track. The value is between 0 and 1.0.
 
-- **track** (int): _The index of the track._
-- **index** (int): _The index of the plugin_
+- **track** (int): _The index of the track where the plugin is instantiated_
+- **index** (int): _The index of the plugin inserted on the defined track_
 - **paramindex** (int): _The index of the parameter_
 
 ### GetRecordingLevel(trackIndex)
-This function returns the recording level of the track at the specified index.
+This function returns the recording level of the track at the specified index as a float value.
 
-- **trackIndex** (int): _The index of the track_
+- **trackIndex** (int): _The index of the track to get the recording level of_
 
 ### GetSendValue(track, SendTrackNumber)
 This function gets the value of the defined Send track and return the float value.
 
-- **track** (int): _The index of the track_
-- **index** (int): _The number of the Send track_
-
-### GetTouchVolume()
-This function returns the touch volume for the control surface.
+- **track** (int): _The index of the track to get the defined send level value of_
+- **index** (int): _The number of the Send track to get the send level value of_
 
 ### GetTrackIndex(trackID)
 This function returns the track index for the specified track ID.
@@ -229,13 +254,16 @@ This function sets the value of the defined Send track.
 - **index** (int): _The number of the Send track_
 - **value** (float): _The value to set for the parameter, ranging from 0 to 1.0_
 
-### SetTouchVolume()
+### SetTouchVolume(index)
 This function sets the touch volume for the control surface.
+
+- **index** (int): _The index of the track to set the touch volume for_
 
 ### SetVolume(trackIndex, level)
 This function sets the volume of the track at the specified index to the given level.
 
-- **trackIndex** (int): _The index of the track_
+- **trackIndex** (int): _The index of the track to set the volume of_
+- **level** (float): _The volume level value to set for the defined track ranging from 0 to 1.0. Where 0db on the fader is equal to 0.773475_
 
 ### ShowPlugin(track, index, bShow)
 This function shows or hides the plugin at the specified index on the given track based on the provided boolean value bShow.
