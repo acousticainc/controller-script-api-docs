@@ -19,6 +19,6 @@ Line | Message Type | MIDI Channel | Data 1 | Data 2
 ---  | ---          | ---          | ---    | ---        
 1	 | B0 (CC)      | CH:00 (1)		   | 0x04 (4) 	| 0x2A (42)  
   
-The values are displayed in their hex and decimal values. In the case of the MEssage Type, it will display the hex and common name (e.g., CC, Note, etc.)
+The values are displayed in their hexadecimal and decimal values. In the case of the Message Type, it will display the hexadecimal and common name (e.g., CC, Note, etc.)
 
 ![](/img/MIDImonitor.png)
