@@ -4,7 +4,7 @@ sidebar_position: 7
 
 # notificationType
 
-A list of notification types that Mixcraft can send.
+A list of notification types that Mixcraft can send. These properties can be used in the [Notify()](./functions-called-by-mixcraft.md/#notifynotificationtype-data1-data2) function to send feedback to your hardware controller, when applicable.
 
 1. MM.TRACK_ORDER_CHANGED
 2. MM.TRACK_VOLUME_CHANGE  (data1=trackIndex, data2 = vol from 0 to 2)

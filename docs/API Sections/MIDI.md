@@ -82,11 +82,11 @@ The SendMIDI function sends MIDI messages to the hardware controller. This funct
 - **data2** (int): _ specifies the second data value associated with the MIDI message, with values ranging from 0 to 127_This parameter is only required for certain types of MIDI messages (i.e., Note On, Note Off, Control Change, and Pitch Bend).
 
 ### SendMIDIArray(arrayOfBytes)
-
+This function sends and array of bytes as a MIDI message.
 
 ### SendSysEx(arrayOfBytes)
 
- The system exclusive start (xF0) and end byte (xF7) are not needed and the system will handle it appropriately.
+ This function sends and array of bytes with the system exclusive start (xF0) and end bytes (xF7)included -- they are not needed in the array; the function will will handle adding them.
 
 
 
