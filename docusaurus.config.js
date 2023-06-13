@@ -85,8 +85,8 @@ const config = {
           },
           // {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/facebook/docusaurus',
-            label: 'GitHub',
+            href: 'https://github.com/acousticainc/controller-script-api-docs',
+            label: 'Docs GitHub',
             position: 'right',
           },
         ],

@@ -89,6 +89,11 @@ This function returns the name of the track at the specified index.
 
 - **trackIndex** (int): _The index of the track to get the name of_
 
+### GetNumberOfLanes(trackIndex)
+This function returns the number of lanes, as an int value, of the track at the specified index.
+
+- **trackIndex** (int): _The index of the track to get the number of lanes of_
+
 ### GetNumPluginParams(track, index)
 This function returns the number of parameters for the plugin at the specified index on the given track.
 
@@ -142,22 +147,22 @@ This function returns the current volume of the track at the specified index.
 ### IsArmed(trackIndex)
 This function returns a boolean indicating if the track at the specified index is armed for recording.
 
-- **trackIndex** (int): _The index of the track_
+- **trackIndex** (int): _The index of the track being checked for armed state_
 
 ### IsMuted(trackIndex)
 This function returns a boolean indicating if the track at the specified index is muted.
 
-- **trackIndex** (int): _The index of the track_
+- **trackIndex** (int): _The index of the track being checked for mute state_
 
 ### IsSelected(trackIndex)
 This function returns a boolean indicating if the track at the specified index is currently selected.
 
-- **trackIndex** (int): _The index of the track_
+- **trackIndex** (int): _The index of the track being checked for selection state_
 
 ### IsSoloed(trackIndex)
 This function returns a boolean indicating if the track at the specified index is in solo mode.
 
-- **trackIndex** (int): _The index of the track_
+- **trackIndex** (int): _The index of the track being checked for solo state_
 
 ### Mute(trackIndex, state)
 This function mutes or unmutes the track at the specified index based on the provided boolean value.
@@ -175,6 +180,11 @@ This function returns the total number of Send tracks in the project.
 
 ### NumTracks()
 This function returns the total number of tracks in the project.
+
+### NumTracksOfType(trackType)
+This function returns the total number of tracks of a defined type in the project.
+
+- **trackType** (type): _The type of the track. See [Track Type Constants](#track-type-constants) above_
 
 ### Select(trackIndex)
 This function selects the track at the specified index.
@@ -214,13 +224,18 @@ This function sets the drive value for the track at the specified index to the g
 This function sets the EQ value for the specified track index and EQ type to the given value.
 
 - **trackIndex** (int): _The index of the track_
-- **eqType** (type): _The EQ type to apply the value to (see constants at top of page) _
+- **eqType** (type): _The EQ type to apply the value to (see constants at top of page)_
 
 ### SetGain(trackIndex, amount)
 This function sets the gain value for the track at the specified index to the given amount.
 
 - **trackIndex** (int): _The index of the track_
 - **amount** (float): The gain value to set_
+
+### SetMIDIRecordingQuantize(quantizeValue)
+This function sets the Automatic Quantization value available for MIDI Recording.
+
+- **quantizeValue** (type): _The quantize value to apply to the Automatic Quantization of MIDI recording. See [quantization constants](#quantize-constants) above_
 
 ### SetName(trackIndex, name)
 This function sets the name of the track at the specified index to the given name.
@@ -278,3 +293,7 @@ This function enables or disables solo for the track at the specified index base
 - **trackIndex** (int): _The index of the track_
 - **state** (bool): _The soloed state of the defined track_
 
+### ToggleMIDIRecordingQuantize(index)
+This function toggles the Automatic Quantize function on a MIDI track.
+
+- **index** (int): _The index of the track in which to toggle Automatic Quantize feature_
