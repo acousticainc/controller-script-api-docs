@@ -4,7 +4,7 @@ sidebar_position: 5
 
 # Available JavaScript Operators and Keywords
 
-This section covers the available operators and keywords in the Mixcraft script editor.
+The Scripting API uses a limited set of the Javascript language. This section covers the available operators and keywords in the Mixcraft script editor.
 
 ### Operators
 - Standard Javascript operators apply.
