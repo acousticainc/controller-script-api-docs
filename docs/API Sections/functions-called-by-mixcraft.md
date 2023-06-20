@@ -75,7 +75,7 @@ function OnTimer(timerID)
 The ```OnMIDI()``` function is called when a MIDI message is received at the defined MIDI input of the connected device. 
 
 #### Parameters
-**messageType** *(int)* - The MIDI message type. The available ```messageType``` constants and their corresponding integer values as _(int)_:
+**messageType** *(int)* - The MIDI message type. The available ```messageType``` properties and their corresponding integer values as _(int)_:
 
 
 - MIDI.NOTE_OFF (128)

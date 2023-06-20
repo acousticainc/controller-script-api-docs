@@ -2,20 +2,26 @@
 sidebar_position: 3
 ---
 
-The ```Track``` section covers functions and constants that allow access to the track controls in Mixcraft.
+The ```Track``` section covers functions and properties that allow access to the track controls in Mixcraft.
 
-## Track Constants
+:::tip
+
+All functions that take a track index as an argument will default to an absolute track index that corresponds with the track indexes in Mixcraft. However, the optional argument ```bAbsoluteFlag = false``` can be added, which will set the index argument to a relative value, based on the controller fader index.
+
+:::
+
+## Track properties
 
 - MASTER_TRACK (-1)
 - PREVIEW_TRACK (-2)
 
-## Track EQ Constants
+## Track EQ properties
 
 - EQ_LOW
 - EQ_MID
 - EQ_HIGH
 
-## Quantize Constants
+## Quantize properties
 
 - QUANTIZE_OFF
 - QUANTIZE_4
@@ -26,7 +32,7 @@ The ```Track``` section covers functions and constants that allow access to the 
 - QUANTIZE_8_TRIP
 - QUANTIZE_16_TRIP
 
-## Track Type Constants
+## Track Type properties
 
 - TT_Audio
 - TT_MIDI
@@ -46,6 +52,9 @@ This function arms or disarms the track at the specified index for recording bas
 
 - **trackIndex** (int): _The index of the track_
 - **bool** )bool): _The arm state of the track_
+
+### FaderToTrack(value)
+This function returns the track index of a Mixcraft track that is mapped to the fader of a control surface. The value is retrieved based on the bank offset value which is set with Track.SetBankOffset().
 
 ### GetBankOffset()
 This function returns the current bank offset.
@@ -72,7 +81,7 @@ This function returns the drive value for the track at the specified index.
 This function returns the current EQ value for the specified track index and EQ type.
 
 - **trackIndex** (int): _The index of the track_
-- **eqType** (type): _The EQ type to get the value from (see EQ constants at top of page) _
+- **eqType** (type): _The EQ type to get the value from (see [EQ properties](#track-eq-properties) at top of page) _
 
 ### GetGain(trackIndex)
 This function returns the gain value for the track at the specified index.
@@ -139,6 +148,12 @@ This function gets the value of the defined Send track and return the float valu
 ### GetTrackIndex(trackID)
 This function returns the track index for the specified track ID.
 
+### GetTrackType(index)
+This function returns one of the following track types:
+Track.TT_Audio, Track.TT_MIDI, Track.TT_SubMix, Track.TT_MasterTrack, Track.TT_Video, Track.TT_InstrumentOutput, Track.TT_ReWire, Track.TT_Text
+
+- **index** (int): _The index of the track to get the track type of_
+
 ### GetVolume(trackIndex)
 This function returns the current volume of the track at the specified index.
 
@@ -184,7 +199,12 @@ This function returns the total number of tracks in the project.
 ### NumTracksOfType(trackType)
 This function returns the total number of tracks of a defined type in the project.
 
-- **trackType** (type): _The type of the track. See [Track Type Constants](#track-type-constants) above_
+- **trackType** (type): _The type of the track. See [Track Type properties](#track-type-properties) above_
+
+### NumVisibleTracks()
+This function returns the number of visible tracks in the main window of Mixcraft. The children of a Submix track would not be counted as visible until the Submix track is expanded.
+
+- **trackType** (type): _The type of the track. See [Track Type properties](#track-type-properties) above_
 
 ### Select(trackIndex)
 This function selects the track at the specified index.
@@ -224,7 +244,7 @@ This function sets the drive value for the track at the specified index to the g
 This function sets the EQ value for the specified track index and EQ type to the given value.
 
 - **trackIndex** (int): _The index of the track_
-- **eqType** (type): _The EQ type to apply the value to (see constants at top of page)_
+- **eqType** (type): _The EQ type to apply the value to (see [EQ properties](#track-eq-properties) at top of page)_
 
 ### SetGain(trackIndex, amount)
 This function sets the gain value for the track at the specified index to the given amount.
@@ -235,7 +255,7 @@ This function sets the gain value for the track at the specified index to the gi
 ### SetMIDIRecordingQuantize(quantizeValue)
 This function sets the Automatic Quantization value available for MIDI Recording.
 
-- **quantizeValue** (type): _The quantize value to apply to the Automatic Quantization of MIDI recording. See [quantization constants](#quantize-constants) above_
+- **quantizeValue** (type): _The quantize value to apply to the Automatic Quantization of MIDI recording. See [quantization properties](#quantize-properties) above_
 
 ### SetName(trackIndex, name)
 This function sets the name of the track at the specified index to the given name.
@@ -297,3 +317,6 @@ This function enables or disables solo for the track at the specified index base
 This function toggles the Automatic Quantize function on a MIDI track.
 
 - **index** (int): _The index of the track in which to toggle Automatic Quantize feature_
+
+### TrackToFader(value)
+This function returns the fader index of a control surface based on the Mixcraft track index supplied as an argument. The value is retrieved based on the bank offset value which is set with Track.SetBankOffset().

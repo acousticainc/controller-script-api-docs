@@ -2,9 +2,9 @@
 sidebar_position: 4
 ---
 
-The ```Mixcraft``` section covers functions and constants that allow access to the transport controls in Mixcraft.  
+The ```Mixcraft``` section covers functions and properties that allow access to the transport controls in Mixcraft.  
 
-## Seek Constants  
+## Seek properties  
 
 ### SEEK_MAX 
  - used in ```Rewind()  ``` or ```FastForward()  ``` for maximum speed  
@@ -15,7 +15,7 @@ The ```Mixcraft``` section covers functions and constants that allow access to t
 ### SEEK_TINY
  - used in ```Rewind()  ``` or ```FastForward()  ``` for slow speed  
    
-## Metronome Constants  
+## Metronome properties  
 
 ### METRONOME_PLAYBACK
 - play the metronome only during playback
@@ -37,7 +37,7 @@ This function adds a marker to the project at the specified time.
 - **time** (float): _the time (in milliseconds) to set the marker on the timeline_
 
 ### FastForward(seekAmount)    
-This function forwards the playhead by the specified SeekAmount (see seek constants above).
+This function forwards the playhead by the specified SeekAmount (see [seek properties](#seek-properties) above).
 
 - **seekAmount** (float): _the amount of time (in seconds) to forward the playhead_
 
@@ -97,7 +97,7 @@ This function starts the recording process in Mixcraft.
 This function redoes the last action performed in Mixcraft.
 
 ### Rewind(seekAmount)    
-This function rewinds the playhead by the specified SeekAmount (see seek constants above).
+This function rewinds the playhead by the specified SeekAmount (see [seek properties](#seek-properties) above).
 
 - **seekAmount** (float): _the amount of time (in seconds) to rewind the playhead_
 
@@ -128,7 +128,7 @@ This function sets the length of the loop.
 ### SetMetronome(metroType, state)
 This function that sets the metronome type and toggles the on/off state.
 
-- **metroType** (CONST): one of the available metronome types as listed above in Metronome Constants.
+- **metroType** (CONST): one of the available metronome types as listed above in [metronome properties](#metronome-properties) above.
 
 - **state** (bool): the on or off state for the metronome.
 

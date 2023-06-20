@@ -4,9 +4,9 @@ sidebar_position: 6
 
 # Perform  
 
-The ```Perform``` section covers functions and constants that allow access to the performance panel and controls available in Mixcraft.
+The ```Perform``` section covers functions and properties that allow access to the performance panel and controls available in Mixcraft.
 
-## Slot State Constants  
+## Slot state properties  
 
 - SLOT States
  - SS_EMPTY (0)
@@ -19,7 +19,7 @@ The ```Perform``` section covers functions and constants that allow access to th
  - SS_RECORDING (7)  
  
 
-## Performance Play Constants
+## Performance play properties
 - PP_Instant
 - PP_8_MEASURES
 - PP_4_MEASURES

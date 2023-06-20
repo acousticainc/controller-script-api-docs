@@ -7,7 +7,7 @@ In the ```OnMIDI(messageType, midiChannel, value1, value2)``` function, you'll f
 
 
 ### messageType  
-The following list holds the constants available for MIDI message types:
+The following list holds the properties available for MIDI message types:
 
 - MIDI.NOTE_ON
 - MIDI.NOTE_OFF
@@ -55,7 +55,7 @@ A hexadecimal value for the second and third byte of a MIDI message. Depending o
     - value2 = null  
   
     
-### Constants  
+### Properties  
   
 - MIDI.NOTE_OFF (128)
 - MIDI.NOTE_ON (144)
@@ -73,7 +73,7 @@ A hexadecimal value for the second and third byte of a MIDI message. Depending o
 
 The SendMIDI function sends MIDI messages to the hardware controller. This function allows the user to specify the type of MIDI message to be sent, the channel on which the message will be sent, and any associated data values.
 
-- **type** (type): _specifies the type of MIDI message to be sent to the device. The type parameter corresponds with an  integer value, but we recommend using the constants above, for readability_
+- **type** (type): _specifies the type of MIDI message to be sent to the device. The type parameter corresponds with an  integer value, but we recommend using the properties above, for readability_
 
 - **chan** (int): _specifies the MIDI channel on which the message will be sent, with values ranging from 1 to 16_
 
