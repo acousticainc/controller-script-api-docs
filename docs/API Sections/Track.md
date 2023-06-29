@@ -6,7 +6,7 @@ The ```Track``` section covers functions and properties that allow access to the
 
 :::tip
 
-All functions that take a track index as an argument will default to an absolute track index that corresponds with the track indexes in Mixcraft. However, the optional argument ```bAbsoluteFlag = false``` can be added, which will set the index argument to a relative value, based on the controller fader index.
+All functions that take a track index as an argument will default to a relative track index that corresponds with the bank offset. However, the optional argument ```bAbsoluteFlag = true``` can be added, which will set the index argument to an absolute value, based on the tracks index in Mixcraft.
 
 :::
 
