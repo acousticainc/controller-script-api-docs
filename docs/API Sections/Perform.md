@@ -111,9 +111,6 @@ This function returns the number of columns in the grid controller as an int val
 ### NumRows()
 This function returns the number of rows in the grid controller as an int value.
 
-### PlaySet(col)
-This function starts playback for all tracks in the specified column (set).
-
 - **col** (int): _the column number (starting from 0) to start playback on_
 
 ### Playing()
@@ -159,6 +156,9 @@ This function stops playback for the specified slot (row, col).
 
 - **row** (int): _the row number (starting from 0) of the slot to stop_
 - **col** (int): _the column number (starting from 0) of the slot to stop_
+
+### TriggerSet(col)
+This function starts playback for all tracks in the specified column (set).
 
 ### TriggerSlot(row, col, bButtonDown)
 This function triggers the specified slot (row, col) to play or stop based on the boolean value bButtonDown.
