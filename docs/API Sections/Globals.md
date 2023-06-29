@@ -63,6 +63,20 @@ Globals.StartTimer(FLASH_TIMER, 250);
 Globals.StopTimer(ANIMATION_TIMER);
 ```  
   
+## IsTimerRunning(timerID)
+
+The ```IsTimerRunning()``` function returns a bool based on wether the timer ID supplied as an argument is running or not.
+
+### Paramteters
+
+- **timerID** *(int)* - _The timer to start_
+
+#### Example
+
+```js
+ANIM_TIMER = 0x01;
+Globals.IsTimerRunning(ANIM_TIMER);
+```  
 
 ## ToHexString(number, padding)  
 
