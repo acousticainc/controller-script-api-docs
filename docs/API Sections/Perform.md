@@ -139,7 +139,7 @@ This function sets the size of the grid controller with the specified number of 
 - **numRows** (int): _the number of rows available on the grid controller_
 
 ### Show(bool)
-This function will show or hide the performance panel based on teh supplied bool value.
+This function will show or hide the performance panel based on the supplied bool value.
 
 - **bool** (bool): _determines whether to open or close the performance panel_
 
