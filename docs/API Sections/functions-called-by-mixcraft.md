@@ -81,7 +81,7 @@ The ```OnMIDI()``` function is called when a MIDI message is received at the def
 - MIDI.NOTE_OFF (128)
 - MIDI.NOTE_ON (144)
 - MIDI.POLY_PRESSURE (160)
-- MIDI.CC_MESSAGE (167)
+- MIDI.CC_MESSAGE (176)
 - MIDI.PROGRAM_CHANGE (192)
 - MIDI.CHANNEL_PRESSURE (208)
 - MIDI.PITCH_BEND (224)
