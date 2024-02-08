@@ -158,3 +158,11 @@ This function toggles the play state between playing and stopped.
 
 ### Undo()
 This function reverts to the last undo state in memory.
+
+### ZoomHorizontal(val)
+This function controls the horizontal zoom value in Mixcraft.
+- **val** (double): _the horizontal zoom value between 0 to 1.0._
+
+### ZoomVertical(val)
+This function controls the vertical zoom value in Mixcraft.
+- **val** (double): _the vertical zoom value between 0 to 1.0._

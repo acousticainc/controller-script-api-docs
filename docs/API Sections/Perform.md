@@ -29,6 +29,24 @@ The ```Perform``` section covers functions and properties that allow access to t
 - PP_1_4_NOTE
 - PP_1_8_NOTE
 
+## Performance Global Queue properties
+- PP_Instant
+- PP_8_MEASURES
+- PP_4_MEASURES
+- PP_2_MEASURES
+- PP_1_MEASURE
+- PP_1_2_NOTE
+- PP_1_4_NOTE
+- PP_1_8_NOTE
+- PP_1_16_NOTE
+- PP_1_32_NOTE
+- PP_1_64_NOTE
+- PP_1_16_NOTE
+- PP_1_4_TRIP_NOTE
+- PP_1_8_TRIP_NOTE
+- PP_1_16_TRIP_NOTE
+- PP_1_32_TRIP_NOTE
+- PP_1_64_TRIP_NOTE
 
 ## Functions  
 
@@ -50,6 +68,10 @@ This function returns a boolean indicating if the grid can be shifted to the rig
 ### CanMoveGridUp()
 This function returns a boolean indicating if the grid can be shifted upwards.
 
+### DeleteClip(row, col)
+This function deletes the clip in the supplied row and column arguments.
+- **row** (int): _the row number (starting from 0) of teh clip to delete_
+- **col** (int): _the column number (starting from 0) of teh clip to delete_
 ### GetGridSetOffset()
 This function returns the current set offset of the grid controller.
 
@@ -118,6 +140,16 @@ This function starts playback of the currently selected track.
 
 ### Record()
 This function starts or stops recording for the selected track, depending on the current record state.
+
+### SetGlobalQueueMode(prop)
+This function sets the global queue value for performance mode.
+
+- **prop** (int): _the desired global queue property constant_
+Refer to [Global Queue Properties section ](##-Performance-Global-Queue-properties) for all available options.
+
+### SetGlobalRecordMode(numBars)
+This function sets the global record value for performance mode.
+- **numBars** (int): _the number of bars a recorded clip will be. Options are 1,2,4,8,12,16,32 and 64 bars._
 
 ### SetGridSetOffset(setIndex)
 This function sets the grid controller's offset to the specified set index.
