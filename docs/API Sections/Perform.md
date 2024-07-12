@@ -164,11 +164,11 @@ This function sets the grid controller's track offset to the specified track ind
 ### SetIsButtonController()
 This function sets whether the control surface is a button controller (e.g., grid controller) based on a boolean input.
 
-### SetSize(numCols, numRows)
-This function sets the size of the grid controller with the specified number of columns (numCols) and rows (numRows).
+### SetSize(numRows, numCols)
+This function sets the size of the grid controller with the specified number of rows (numRows) and columns (numCols).
 
-- **numCols** (int): _the number of columns available on the grid controller_
 - **numRows** (int): _the number of rows available on the grid controller_
+- **numCols** (int): _the number of columns available on the grid controller_
 
 ### Show(bool)
 This function will show or hide the performance panel based on the supplied bool value.

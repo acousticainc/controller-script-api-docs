@@ -93,6 +93,11 @@ This function returns the ID of the track at the specified track index.
 
 - **trackIndex** (int): _The index of the track to get the ID of_
 
+### GetMIDIRecordingQuantize(trackIndex)
+This function returns the recording quantize value of the track at the specified index (only applies to MIDI tracks).
+
+- **trackIndex** (int): _The index of the track to get the ID of_
+
 ### GetName(trackIndex)
 This function returns the name of the track at the specified index.
 
@@ -144,6 +149,9 @@ This function gets the value of the defined Send track and return the float valu
 
 - **track** (int): _The index of the track to get the defined send level value of_
 - **index** (int): _The number of the Send track to get the send level value of_
+
+### GetSelectedTrack()
+This function returns the index of the currently selected track.
 
 ### GetTrackIndex(trackID)
 This function returns the track index for the specified track ID.
@@ -252,9 +260,10 @@ This function sets the gain value for the track at the specified index to the gi
 - **trackIndex** (int): _The index of the track_
 - **amount** (float): The gain value to set_
 
-### SetMIDIRecordingQuantize(quantizeValue)
+### SetMIDIRecordingQuantize(trackIndex, quantizeValue)
 This function sets the Automatic Quantization value available for MIDI Recording.
 
+- **trackIndex** (int): _The index of the track_
 - **quantizeValue** (type): _The quantize value to apply to the Automatic Quantization of MIDI recording. See [quantization properties](#quantize-properties) above_
 
 ### SetName(trackIndex, name)
