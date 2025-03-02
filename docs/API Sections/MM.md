@@ -24,15 +24,15 @@ A list of notification types that Mixcraft can send. These properties can be use
 14. MM.RECORDING_STARTED
 15. MM.RECORDING_STOPPED
 
-16. BANK_OFFSET_CHANGE (data1 = trackindex)
-17. LOOP_MODE_CHANGED (data1 = loopFlag)
-18. TRACK_UNSELECTED
-19. TRACK_COLOR_CHANGE (data1 = trackindex)
-20. TRACK_SEND_CHANGE (data1 = faderNum, data2 = sendNum)
+16. MM.BANK_OFFSET_CHANGE (data1 = trackindex)
+17. MM.LOOP_MODE_CHANGED (data1 = loopFlag)
+18. MM.TRACK_UNSELECTED
+19. MM.TRACK_COLOR_CHANGE (data1 = trackindex)
+20. MM.TRACK_SEND_CHANGE (data1 = faderNum, data2 = sendNum)
 
-21. PERFORM_SHOW
-22. PERFORM_HIDE
+21. MM.PERFORM_SHOW
+22. MM.PERFORM_HIDE
 
-23. MAX_MESSAGES
+23. MM.MAX_MESSAGES
 
 
