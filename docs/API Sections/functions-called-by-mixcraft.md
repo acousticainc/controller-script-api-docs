@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Functions Called by Mixcraft
 
-This section covers the functions in your script that are called by Micraft.
+This section covers the functions in your script that are called by Mixcraft.
 
 ## OnStartup()
 
